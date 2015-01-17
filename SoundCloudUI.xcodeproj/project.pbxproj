@@ -767,11 +767,14 @@
 				GCC_PREFIX_HEADER = "Sources/SoundCloudUI-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				HEADER_SEARCH_PATHS = (
-					"${SRCROOT}",
 					"$(inherited)/**",
-					"../CocoaSoundCloudAPI/**",
-					"../OAuth2Client/**",
-					"../OHAttributedLabel/**",
+					"${SRCROOT}",
+					"${PROJECT_DIR}/../CocoaSoundCloudAPI/**",
+					"${PROJECT_DIR}/../OAuth2Client/**",
+					"${PROJECT_DIR}/../OHAttributedLabel/**",
+					"$(BUILD_ROOT)/../CocoaSoundCloudAPI",
+					"$(BUILD_ROOT)/../OAuth2Client",
+					"$(BUILD_ROOT)/../OHAttributedLabel",
 				);
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				OTHER_LDFLAGS = "-ObjC";
@@ -788,11 +791,14 @@
 				GCC_PREFIX_HEADER = "Sources/SoundCloudUI-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				HEADER_SEARCH_PATHS = (
-					"${SRCROOT}",
 					"$(inherited)/**",
-					"../CocoaSoundCloudAPI/**",
-					"../OAuth2Client/**",
-					"../OHAttributedLabel/**",
+					"${SRCROOT}",
+					"${PROJECT_DIR}/../CocoaSoundCloudAPI/**",
+					"${PROJECT_DIR}/../OAuth2Client/**",
+					"${PROJECT_DIR}/../OHAttributedLabel/**",
+					"$(BUILD_ROOT)/../CocoaSoundCloudAPI",
+					"$(BUILD_ROOT)/../OAuth2Client",
+					"$(BUILD_ROOT)/../OHAttributedLabel",
 				);
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				OTHER_LDFLAGS = "-ObjC";
