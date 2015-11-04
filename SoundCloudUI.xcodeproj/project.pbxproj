@@ -556,7 +556,7 @@
 		F6EF8C5813F929D700B20B40 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = nxtbgthng;
 			};
 			buildConfigurationList = F6EF8C5B13F929D700B20B40 /* Build configuration list for PBXProject "SoundCloudUI" */;
@@ -661,6 +661,7 @@
 				INFOPLIST_FILE = "SoundCloudUI-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.soundcloud.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = SoundCloudUI;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
@@ -687,6 +688,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "SoundCloudUI-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.soundcloud.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = SoundCloudUI;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
@@ -706,8 +708,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -743,6 +747,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -767,7 +772,7 @@
 				GCC_PREFIX_HEADER = "Sources/SoundCloudUI-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				HEADER_SEARCH_PATHS = (
-					"$(inherited)/**",
+					"$(inherited)",
 					"${SRCROOT}",
 					"${PROJECT_DIR}/../CocoaSoundCloudAPI/**",
 					"${PROJECT_DIR}/../OAuth2Client/**",
@@ -791,7 +796,7 @@
 				GCC_PREFIX_HEADER = "Sources/SoundCloudUI-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				HEADER_SEARCH_PATHS = (
-					"$(inherited)/**",
+					"$(inherited)",
 					"${SRCROOT}",
 					"${PROJECT_DIR}/../CocoaSoundCloudAPI/**",
 					"${PROJECT_DIR}/../OAuth2Client/**",
