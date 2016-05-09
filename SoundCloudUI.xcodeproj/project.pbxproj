@@ -556,7 +556,7 @@
 		F6EF8C5813F929D700B20B40 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = nxtbgthng;
 			};
 			buildConfigurationList = F6EF8C5B13F929D700B20B40 /* Build configuration list for PBXProject "SoundCloudUI" */;
@@ -770,6 +770,7 @@
 				GCC_PREFIX_HEADER = "Sources/SoundCloudUI-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				HEADER_SEARCH_PATHS = "../**";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = SoundCloudUI;
 				SKIP_INSTALL = YES;
@@ -784,6 +785,7 @@
 				GCC_PREFIX_HEADER = "Sources/SoundCloudUI-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				HEADER_SEARCH_PATHS = "../**";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = SoundCloudUI;
 				SKIP_INSTALL = YES;
