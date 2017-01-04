@@ -130,8 +130,8 @@
     // Cover Image
     self.coverImageButton = [[[SCCoverImageButton alloc] initWithFrame:CGRectMake(0, 0, 0, 0)] autorelease];
     self.coverImageButton.opaque = NO;
-    self.coverImageButton.titleLabel.lineBreakMode = UILineBreakModeWordWrap;
-    self.coverImageButton.titleLabel.textAlignment = UITextAlignmentCenter;
+    self.coverImageButton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    self.coverImageButton.titleLabel.textAlignment = NSTextAlignmentCenter;
     self.coverImageButton.titleLabel.font = [UIFont systemFontOfSize:[UIFont smallSystemFontSize]];
     [self.coverImageButton setShowsTouchWhenHighlighted:YES];
     [self addSubview:self.coverImageButton];
@@ -139,7 +139,7 @@
     // What
     self.whatTextField = [[[SCTextField alloc] initWithFrame:CGRectMake(0, 0, 0, 0)] autorelease];
     self.whatTextField.opaque = NO;
-    self.whatTextField.textAlignment = UITextAlignmentLeft;
+    self.whatTextField.textAlignment = NSTextAlignmentLeft;
     self.whatTextField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     self.whatTextField.textColor = [UIColor whiteColor];
     self.whatTextField.font = [UIFont systemFontOfSize:15.0];
@@ -151,7 +151,7 @@
     // Where
     self.whereTextField = [[[SCTextField alloc] initWithFrame:CGRectMake(0, 0, 0, 0)] autorelease];
     self.whereTextField.opaque = NO;
-    self.whereTextField.textAlignment = UITextAlignmentLeft;
+    self.whereTextField.textAlignment = NSTextAlignmentLeft;
     self.whereTextField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     self.whereTextField.textColor = [UIColor whiteColor];
     self.whereTextField.font = [UIFont systemFontOfSize:15.0];
@@ -248,8 +248,13 @@
     - CGRectGetWidth(self.avatarImageView.bounds)
     - CGRectGetWidth(self.logoutSeparator.bounds)
     - CGRectGetWidth(self.logoutButton.bounds);
+    CGSize userLabelSize = CGSizeZero;;
+    if(self.userNameLabel.text)
+    {
+        NSDictionary* fontAttributes = @{NSFontAttributeName: self.userNameLabel.font};
+        userLabelSize = [self.userNameLabel.text sizeWithAttributes:fontAttributes];
+    }
     
-    CGSize userLabelSize = self.userNameLabel.text ? [self.userNameLabel.text sizeWithFont:self.userNameLabel.font] : CGSizeZero;
     userLabelSize.width = MIN(userLabelSize.width, maxUserLabelWidth);
     CGRect labelRect = CGRectZero;
     labelRect.size = userLabelSize;
@@ -275,7 +280,8 @@
     
     CGRect logoutButtonFrame = CGRectZero;
     if (self.logoutButton.titleLabel.text) {
-        logoutButtonFrame.size = [self.logoutButton.titleLabel.text sizeWithFont:self.logoutButton.titleLabel.font];
+        NSDictionary* fontAttributes = @{NSFontAttributeName: self.logoutButton.titleLabel.font};
+        logoutButtonFrame.size = [self.logoutButton.titleLabel.text sizeWithAttributes:fontAttributes];
         logoutButtonFrame.origin = CGPointMake(CGRectGetMaxX(self.logoutSeparator.frame) + SPACING, SPACING);
     }
     self.logoutButton.frame = logoutButtonFrame;

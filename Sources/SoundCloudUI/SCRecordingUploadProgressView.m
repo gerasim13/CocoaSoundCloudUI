@@ -156,7 +156,7 @@
         title = [[[UILabel alloc] initWithFrame:CGRectZero] autorelease];
         title.backgroundColor = [UIColor clearColor];
         title.numberOfLines = 2;
-        title.lineBreakMode = UILineBreakModeWordWrap;
+        title.lineBreakMode = NSLineBreakByWordWrapping;
         title.text = nil;
         title.font = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
         [self.contentView addSubview:title];
@@ -331,7 +331,14 @@
     
     if (self.title.text) {
         CGSize maxTitleSize = CGSizeMake(innerWitdh - offset.x, CGFLOAT_MAX);
-        CGSize titleSize = [self.title.text sizeWithFont:self.title.font constrainedToSize:maxTitleSize];
+        
+        NSDictionary* fontAttributes = @{NSFontAttributeName: self.title.font};
+        CGRect boundingRect = [self.title.text
+                               boundingRectWithSize:maxTitleSize
+                               options:NSStringDrawingUsesLineFragmentOrigin
+                               attributes:fontAttributes
+                               context:nil];
+        CGSize titleSize = boundingRect.size;
         self.title.frame = CGRectMake(offset.x,
                                       offset.y,
                                       titleSize.width,
