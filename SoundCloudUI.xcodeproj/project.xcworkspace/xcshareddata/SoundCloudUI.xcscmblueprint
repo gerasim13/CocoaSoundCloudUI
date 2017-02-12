@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2F16ABB5253C8A53BD834DD2135B7E534A667AC1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B29AE4E008113EEF1233EFA004AB60842814E054" : 9223372036854775807,
+    "2F16ABB5253C8A53BD834DD2135B7E534A667AC1" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "53F1618D-ED61-4291-BEDA-36C53950815F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B29AE4E008113EEF1233EFA004AB60842814E054" : "..\/..",
+    "2F16ABB5253C8A53BD834DD2135B7E534A667AC1" : "CocoaSoundCloudUI\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SoundCloudUI",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SoundCloudUI.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:gerasim13\/CocoaSoundCloudUI.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2F16ABB5253C8A53BD834DD2135B7E534A667AC1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/bitbucket.org\/casualunderground\/loopsequedj.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B29AE4E008113EEF1233EFA004AB60842814E054"
+    }
+  ]
+}
